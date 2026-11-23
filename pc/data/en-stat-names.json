@@ -1,0 +1,21 @@
+{
+ "生命": "HP",
+ "生命值上限": "Max HP",
+ "被动 / 生命恢复": "Passive / HP Regen",
+ "暴击": "Crit Rate",
+ "暴击伤害": "Crit DMG",
+ "抗暴": "Crit Resistance",
+ "抵抗暴击率": "Crit Rate Resistance",
+ "枪械暴击率加成": "Weapon Crit Rate Boost",
+ "受到伤害变化": "Damage Taken Change",
+ "特殊技能能量": "Special Skill Energy",
+ "最大特殊技能能量": "Max Special Skill Energy",
+ "攻击范围（近战用）": "Attack Range (Melee)",
+ "攻击速度（近战用）": "Attack Speed (Melee)",
+ "异位防御": "Anomaly Defense",
+ "攻击": "ATK",
+ "攻击加成": "ATK%",
+ "防御": "DEF",
+ "防御加成": "DEF%",
+ "生命加成": "HP%"
+}

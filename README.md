@@ -37,11 +37,13 @@ Puedes cambiar de idioma cuando quieras. **Volver al chino** restaura las tablas
 
 ### PC (Windows)
 
-Requiere [Python 3.11](https://www.python.org/downloads/) o posterior (con Tkinter, incluido en el instalador de python.org).
+No hace falta instalar Python: ejecuta `GF2-Parche-Idioma.exe` (el parche va dentro del ejecutable).
 
 1. Cierra el juego.
-2. Descomprime `GRIFFIN-ES-EN-PC-<fecha>.zip` y ejecuta `Iniciar parche de idioma.cmd` (o `Start language patcher.cmd`).
+2. Ejecuta `GF2-Parche-Idioma.exe`. Si el juego está en `C:\Program Files`, Windows pedirá permisos de administrador.
 3. Pulsa **Español** o **English**. Para volver, pulsa **中文 · Restaurar**.
+
+Alternativa con Python 3.11 o posterior: descomprime `Griffin-ClientLanguagePatcher-<fecha>.zip` y ejecuta `Iniciar parche de idioma.cmd` (o `Start language patcher.cmd`).
 
 Si el juego está en `C:\Program Files`, Windows pedirá permiso de administrador. Más detalles en [`pc/README.md`](pc/README.md).
 
@@ -108,8 +110,16 @@ You can switch language at any time. **Back to Chinese** restores the original t
 
 ### PC (Windows)
 
-Requires [Python 3.11](https://www.python.org/downloads/) or later (with Tkinter, included in the python.org installer). Close the game, unzip `GRIFFIN-ES-EN-PC-<date>.zip`, run `Start language patcher.cmd` and pick **English** or **Español**; **中文 · Restaurar** goes back. If the game is under `C:\Program Files`, Windows asks for administrator permission. See [`pc/README.md`](pc/README.md).
+No Python install needed: run `GF2-Parche-Idioma.exe` (the patch is embedded in the executable).
+
+1. Close the game.
+2. Run `GF2-Parche-Idioma.exe`. If the game is under `C:\Program Files`, Windows asks for administrator permission.
+3. Pick **English** or **Español**; **中文 · Restaurar** goes back.
+
+With Python 3.11 or later instead: unzip `Griffin-ClientLanguagePatcher-<date>.zip` and run `Start language patcher.cmd`. See [`pc/README.md`](pc/README.md).
 
 ### Translation
 
 Each Chinese row is replaced by the **official Global client text** when it has a single translation; otherwise by a local machine translation that passes a quality filter. Anything else stays Chinese. IDs, order and every other column are kept, and the page index is rebuilt and validated. Coverage for tables 1195672 is in the table above (English: 516,192 of 518,230 rows; 351,904 official).
+
+On top of that, **Doll skills, keys, weapon names and stat labels are curated in English** following the community sheet *GFL2 Official Release Info Compilation*: newer Dolls and weapons whose text was only machine-translated now read exactly as on the sheet, and names follow the sheet where the Global client differs (`Stellar Pursuit` → `Constellation Pursuit`, `Battlefield Glow` → `Faint Glow of the Battlefield`). That includes each Doll's six fixed (violet) keys and their yellow keys (`Fixed Key - …`, `Expansion Key - …`, `Common Key - …`, `Affinity Key - …`). Official coloured descriptions are kept unless the line had no usable English. See [`pc/README.md`](pc/README.md#para-quien-mantiene-el-paquete) for how to refresh the curated files.

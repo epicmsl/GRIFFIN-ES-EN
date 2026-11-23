@@ -17,6 +17,7 @@ from pathlib import Path
 
 import language_pack
 import patcher
+import en_overrides
 from table_codec import extract_texts
 
 LOCALES = {"en": "Enus", "es": "Eses"}
@@ -83,6 +84,10 @@ def main() -> int:
                 pack[section][locale] = entries
                 pack["machine"][section][locale] = machine_keys
                 print(f"{section}/{locale}: {len(entries):,} textos ({len(machine_keys):,} automáticos)")
+    # Curated English for Doll skills and weapon names (community sheet): official text is kept unless the
+    # line is machine/missing, but names always follow the sheet so the same Doll reads the same everywhere.
+    report = en_overrides.apply(pack)
+    print(en_overrides.summary(report) or "Sin overrides de inglés.")
     path = language_pack.write_pack(pack, args.output)
     print(f"Paquete: {path} ({path.stat().st_size:,} bytes)")
     return 0
